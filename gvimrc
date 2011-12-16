@@ -11,3 +11,4 @@ end
 " mapping keys
 map <D-t> :CommandT<CR>
 imap <D-t> <Esc>:CommandT<CR>
+map <D-F> :Ack<space>
