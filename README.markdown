@@ -69,3 +69,9 @@ Then install the VIM plugins:
     $ ln -fs ~/.vim/ackrc ~/.ackrc
     $ cd ../../../vim-ack
     $ rake install
+
+## Other Plugins To Test In The Future ##
+
+  * github.com/tsaleh/vim-align
+  * github.com/vim-scripts/searchfold.vim
+  * github.com/scrooloose/syntastic
