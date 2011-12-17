@@ -14,6 +14,8 @@ and got inspired/stole from [his own vim files](https://github.com/mislav/vimfil
 First make sure there is no MacVim.app in /Applications. If there is,
 just move it to the trash or archive it.
 
+	# make sure your Ruby version of choice is setup
+	$ rbenv shell 1.9.3-p0  # for instance, if using rbenv
     $ git clone https://github.com/b4winckler/macvim.git
     $ cd macvim/src/MacVim/icons
     $ make getenvy
@@ -37,6 +39,7 @@ Backup and remove any of those files if they already exist:
   * **~/.vim**
   * **~/.vimrc**
   * **~/.gvimrc**
+  * **~/.ackrc**
 
 And execute the following:
 
@@ -46,3 +49,23 @@ And execute the following:
     $ ln -fs ./vim/gvimrc .gvimrc
 
 Then install the VIM plugins:
+
+	$ cd ./vim
+	$ git submodule init
+	$ git submodule update
+
+	# make sure your Ruby version of choice is setup
+	$ rbenv shell 1.9.3-p0  # for instance, if using rbenv
+
+    # setup command-t
+	$ cd bundle/command-t/ruby/command-t
+	$ ruby extconf.rb
+	$ make
+	# compilation succeeded if ends with message "linking shared-object ext.bundle"
+
+	# setup ack
+	# install ack if you don't have it already:
+	$ brew install ack
+	$ ln -fs ~/.vim/ackrc ~/.ackrc
+	$ cd ../../../vim-ack
+	$ rake install
