@@ -12,8 +12,8 @@ end
 map <D-t> :CommandT<CR>
 imap <D-t> <Esc>:CommandT<CR>
 map <D-F> :Ack<space>
-map <D-/> <plug>NERDCommenterToggle<CR>
-imap <D-/> <Esc><plug>NERDCommenterToggle<CR>i
+map <D-/> \\\
+imap <D-/> <Esc>\\\
 
 " NERDTree stuff
 if exists("loaded_nerd_tree")
