@@ -14,8 +14,8 @@ and got inspired/stole from [his own vim files](https://github.com/mislav/vimfil
 First make sure there is no MacVim.app in /Applications. If there is,
 just move it to the trash or archive it.
 
-	# make sure your Ruby version of choice is setup
-	$ rbenv shell 1.9.3-p0  # for instance, if using rbenv
+  # make sure your Ruby version of choice is setup
+  $ rbenv shell 1.9.3-p0  # for instance, if using rbenv
     $ git clone https://github.com/b4winckler/macvim.git
     $ cd macvim/src/MacVim/icons
     $ make getenvy
@@ -29,7 +29,7 @@ just move it to the trash or archive it.
 
 You need to [download the Meslo LG DZ font](https://github.com/andreberg/Meslo-Font/downloads).
 
-Unzip it and install the one(s) you want (i.e.: MesloLGM-DZ-xxx, with xxx being Regular, Bold,
+Unzip it and install the one(s) you want (i.e.: MesloLGS-DZ-xxx, with xxx being Regular, Bold,
 Bold Italic and Italic).
 
 ## Install Zlaj Vimfiles ##
@@ -50,22 +50,22 @@ And execute the following:
 
 Then install the VIM plugins:
 
-	$ cd ./vim
-	$ git submodule init
-	$ git submodule update
+    $ cd ./vim
+    $ git submodule init
+    $ git submodule update
 
-	# make sure your Ruby version of choice is setup
-	$ rbenv shell 1.9.3-p0  # for instance, if using rbenv
+    # make sure your Ruby version of choice is setup
+    $ rbenv shell 1.9.3-p0  # for instance, if using rbenv
 
     # setup command-t
-	$ cd bundle/command-t/ruby/command-t
-	$ ruby extconf.rb
-	$ make
-	# compilation succeeded if ends with message "linking shared-object ext.bundle"
+    $ cd bundle/command-t/ruby/command-t
+    $ ruby extconf.rb
+    $ make
+    # compilation succeeded if ends with message "linking shared-object ext.bundle"
 
-	# setup ack
-	# install ack if you don't have it already:
-	$ brew install ack
-	$ ln -fs ~/.vim/ackrc ~/.ackrc
-	$ cd ../../../vim-ack
-	$ rake install
+    # setup ack
+    # install ack if you don't have it already:
+    $ brew install ack
+    $ ln -fs ~/.vim/ackrc ~/.ackrc
+    $ cd ../../../vim-ack
+    $ rake install

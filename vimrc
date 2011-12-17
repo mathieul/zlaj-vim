@@ -31,9 +31,11 @@ set smartcase                   " ... unless they contain at least one capital l
 
 "" Simple GUI
 if has("gui_running")
-  "set guioptions=egmrt
   set guioptions-=T
   set guioptions-=r
+  set guioptions-=l
+  set guioptions-=L
+  set guioptions-=b
 endif
 
 "" Theme
@@ -103,3 +105,6 @@ if has("statusline") && !&cp && 0
   set statusline+=[%b][0x%B]
 endif
 
+" NERDTree configuration
+let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
+map <Leader>n :NERDTreeToggle<CR>
