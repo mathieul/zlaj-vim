@@ -43,7 +43,8 @@ set background=dark
 colorscheme solarized
 
 "" Leader
-let mapleader="\\"
+" let mapleader="\\"
+let mapleader=","
 
 function s:setupWrapping()
   set wrap
@@ -73,8 +74,17 @@ set scrolloff=3
 " don't use Ex mode, use Q for formatting
 map Q gq
 
+
 " Command-T configuration
 let g:CommandTMaxHeight=20
+
+map <leader>gv :CommandTFlush<cr>\|:CommandT app/views<cr>
+map <leader>gc :CommandTFlush<cr>\|:CommandT app/controllers<cr>
+map <leader>gm :CommandTFlush<cr>\|:CommandT app/models<cr>
+map <leader>gh :CommandTFlush<cr>\|:CommandT app/helpers<cr>
+map <leader>gl :CommandTFlush<cr>\|:CommandT lib<cr>
+map <leader>gg :topleft 30 :split Gemfile<cr>
+map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
 
 " remove trailing spaces
 command! KillWhitespace :normal :%s/ *$//g<cr><c-o><cr>
