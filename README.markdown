@@ -70,6 +70,9 @@ Then install the VIM plugins:
     $ cd ../../../vim-ack
     $ rake install
 
+    # setup vim-preview
+    $ gem install bluecloth github-markup
+
 ## Other Plugins To Test In The Future ##
 
   * github.com/tsaleh/vim-align
