@@ -108,3 +108,6 @@ endif
 " NERDTree configuration
 let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
 map <Leader>n :NERDTreeToggle<CR>
+
+" % to bounce from do to end etc.
+runtime! macros/matchit.vim

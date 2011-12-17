@@ -75,3 +75,4 @@ Then install the VIM plugins:
   * github.com/tsaleh/vim-align
   * github.com/vim-scripts/searchfold.vim
   * github.com/scrooloose/syntastic
+  * github.com/robgleeson/hammer.vim
