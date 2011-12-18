@@ -14,6 +14,8 @@ imap <D-t> <Esc>:CommandT<CR>
 map <D-F> :Ack<space>
 map <D-/> \\\
 imap <D-/> <Esc>\\\
+vmap <D-]> >gv
+vmap <D-[> <gv
 
 " NERDTree stuff
 if exists("loaded_nerd_tree")

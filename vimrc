@@ -11,7 +11,10 @@ set number
 set ruler                       " show the cursor position all the time
 set cursorline
 set list listchars=tab:\ \ ,trail:·
+" set list listchars=tab:▸\ ,eol:¬,trail:·
 set showcmd                     " display incomplete commands
+set wildmenu
+set wildmode=list:longest,full
 
 " Allow backgrounding buffers without writing them, and remember marks/undo
 " for backgrounded buffers
@@ -22,8 +25,11 @@ set nowrap                      " don't wrap lines
 set tabstop=2 shiftwidth=2      " a tab is two spaces
 set expandtab                   " use spaces, not tabs
 set backspace=indent,eol,start  " backspace through everything in insert mode
+set colorcolumn=80
 
 "" Searching
+nnoremap / /\v
+vnoremap / /\v
 set hlsearch                    " highlight matches
 set incsearch                   " incremental searching
 set ignorecase                  " searches are case insensitive...
@@ -78,16 +84,19 @@ map Q gq
 " Command-T configuration
 let g:CommandTMaxHeight=20
 
+nnoremap <leader><space> :noh<cr>
 map <leader>gv :CommandTFlush<cr>\|:CommandT app/views<cr>
 map <leader>gc :CommandTFlush<cr>\|:CommandT app/controllers<cr>
 map <leader>gm :CommandTFlush<cr>\|:CommandT app/models<cr>
 map <leader>gh :CommandTFlush<cr>\|:CommandT app/helpers<cr>
 map <leader>gl :CommandTFlush<cr>\|:CommandT lib<cr>
+map <leader>gs :CommandTFlush<cr>\|:CommandT spec<cr>
+map <leader>gt :CommandTFlush<cr>\|:CommandT test<cr>
 map <leader>gg :topleft 30 :split Gemfile<cr>
 map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
 
 " remove trailing spaces
-command! KillWhitespace :normal :%s/ *$//g<cr><c-o><cr>
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
 " easier navigation between split windows
 nnoremap <c-j> <c-w>j
