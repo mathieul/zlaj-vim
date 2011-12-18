@@ -55,6 +55,6 @@
 [submodule "bundle/vim-textobj-rubyblock"]
 	path = bundle/vim-textobj-rubyblock
 	url = git://github.com/nelstrom/vim-textobj-rubyblock.git
-[submodule "vim-repeat"]
-	path = vim-repeat
+[submodule "bundle/vim-repeat"]
+	path = bundle/vim-repeat
 	url = git://github.com/tpope/vim-repeat.git
