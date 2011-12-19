@@ -79,3 +79,16 @@ Then install the VIM plugins:
   * github.com/vim-scripts/searchfold.vim
   * github.com/scrooloose/syntastic
   * github.com/robgleeson/hammer.vim
+
+## Cheat-Sheet And Command Examples ##
+
+  * [Vim shortcuts](https://github.com/LevelbossMike/vim_shortcut_wallpaper/raw/master/vim-shortcuts_1280x800.png)
+  * **<Command>t**: open command-t window
+  * **,gv**, **,gc**, etc...: open command-t window for views, controllers, etc...
+  * **,gg**: open gemfile window
+  * **<Command>/**: toggle comments
+  * **<Command>]** and **<Command>]** (in visual mode): indent and unindent
+  * **,1**: underline current line with "=" characters
+  * **,W**: remove all trailing spaces
+  * **,<space>**: cancel current search
+  * **'.**: jump back to the last edit location

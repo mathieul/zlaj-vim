@@ -84,6 +84,7 @@ map Q gq
 " Command-T configuration
 let g:CommandTMaxHeight=20
 
+"" Mapping keys
 nnoremap <leader><space> :noh<cr>
 map <leader>gv :CommandTFlush<cr>\|:CommandT app/views<cr>
 map <leader>gc :CommandTFlush<cr>\|:CommandT app/controllers<cr>
@@ -94,9 +95,19 @@ map <leader>gs :CommandTFlush<cr>\|:CommandT spec<cr>
 map <leader>gt :CommandTFlush<cr>\|:CommandT test<cr>
 map <leader>gg :topleft 30 :split Gemfile<cr>
 map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
+map <D-t> :CommandTFlush<cr>\|:CommandT<cr>
+imap <D-t> <Esc>:CommandTFlush<cr>\|:CommandT<cr>
+map <D-F> :Ack<space>
+map <D-/> \\\
+imap <D-/> <Esc>\\\
+vmap <D-]> >gv
+vmap <D-[> <gv
 
 " remove trailing spaces
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+
+" underline current line
+nnoremap <leader>1 yypVr=
 
 " easier navigation between split windows
 nnoremap <c-j> <c-w>j
@@ -107,22 +118,6 @@ nnoremap <c-l> <c-w>l
 " recovery config
 set backupdir=~/.vim/_backup    " where to put backup files.
 set directory=~/.vim/_temp      " where to put swap files.
-
-if has("statusline") && !&cp && 0
-  set laststatus=2  " always show the status bar
-
-  " Start the status line
-  set statusline=%f\ %m\ %r
-
-  " Add fugitive
-  set statusline+=%{fugitive#statusline()}
-
-  " Finish the statusline
-  set statusline+=Line:%l/%L[%p%%]
-  set statusline+=Col:%v
-  set statusline+=Buf:#%n
-  set statusline+=[%b][0x%B]
-endif
 
 " NERDTree configuration
 let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
