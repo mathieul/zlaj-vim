@@ -28,8 +28,8 @@ set backspace=indent,eol,start  " backspace through everything in insert mode
 set colorcolumn=80
 
 "" Searching
-nnoremap / /\v
-vnoremap / /\v
+" nnoremap / /\v
+" vnoremap / /\v
 set hlsearch                    " highlight matches
 set incsearch                   " incremental searching
 set ignorecase                  " searches are case insensitive...
@@ -84,6 +84,7 @@ map Q gq
 " Command-T configuration
 let g:CommandTMaxHeight=20
 
+"" Mapping keys
 nnoremap <leader><space> :noh<cr>
 map <leader>gv :CommandTFlush<cr>\|:CommandT app/views<cr>
 map <leader>gc :CommandTFlush<cr>\|:CommandT app/controllers<cr>
@@ -94,15 +95,31 @@ map <leader>gs :CommandTFlush<cr>\|:CommandT spec<cr>
 map <leader>gt :CommandTFlush<cr>\|:CommandT test<cr>
 map <leader>gg :topleft 30 :split Gemfile<cr>
 map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
+map <D-t> :CommandTFlush<cr>\|:CommandT<cr>
+imap <D-t> <Esc>:CommandTFlush<cr>\|:CommandT<cr>
+map <D-F> :Ack<space>
+map <D-/> \\\
+imap <D-/> <Esc>\\\
+vmap <D-]> >gv
+vmap <D-[> <gv
 
 " remove trailing spaces
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+
+" underline current line
+nnoremap <leader>1 yypVr=
 
 " easier navigation between split windows
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
+
+" tabular setup
+nmap <leader>a= :Tabularize /=<cr>
+vmap <leader>a= :Tabularize /=<cr>
+nmap <leader>a: :Tabularize /:\zs<cr>
+vmap <leader>a: :Tabularize /:\zs<cr>
 
 " recovery config
 set backupdir=~/.vim/_backup    " where to put backup files.
