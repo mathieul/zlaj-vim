@@ -123,6 +123,8 @@ nmap <leader>a= :Tabularize /=<cr>
 vmap <leader>a= :Tabularize /=<cr>
 nmap <leader>a: :Tabularize /:\zs<cr>
 vmap <leader>a: :Tabularize /:\zs<cr>
+nmap <leader>a, :Tabularize /, \zs<cr>
+vmap <leader>a, :Tabularize /, \zs<cr>
 
 " recovery config
 set backupdir=~/.vim/_backup    " where to put backup files.
