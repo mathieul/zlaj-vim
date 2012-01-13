@@ -136,3 +136,7 @@ map <Leader>n :NERDTreeToggle<CR>
 
 " % to bounce from do to end etc.
 runtime! macros/matchit.vim
+
+" setup file types handled by vim-pasta (white list or black list, not both)
+let g:pasta_disabled_filetypes = ['python', 'coffee', 'yaml']
+"let g:pasta_enabled_filetypes = ['ruby', 'javascript', 'css', 'sh']
