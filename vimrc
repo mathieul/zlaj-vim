@@ -128,6 +128,9 @@ vmap <leader>a> :Tabularize /=><cr>
 nmap <leader>a, :Tabularize /, \zs<cr>
 vmap <leader>a, :Tabularize /, \zs<cr>
 
+" multiple-paste
+nnoremap <leader>p :YRShow<cr>
+
 " recovery config
 set backupdir=~/.vim/_backup    " where to put backup files.
 set directory=~/.vim/_temp      " where to put swap files.
