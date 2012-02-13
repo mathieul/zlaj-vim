@@ -73,6 +73,13 @@ Then install the VIM plugins:
     # setup vim-preview
     $ gem install bluecloth github-markup
 
+## Update plugins
+
+To update plugins you need to update the submodules:
+
+    $ cd bundle
+    $ for i in *; do cd $i; git pull origin master; cd ..; done
+
 ## Other Plugins To Test In The Future ##
 
   * github.com/tsaleh/vim-align
