@@ -131,6 +131,10 @@ vmap <leader>a, :Tabularize /, \zs<cr>
 " multiple-paste
 nnoremap <leader>p :YRShow<cr>
 
+" Ruby hash syntax convertion
+map <leader>=>2: :%s/:\([^ ]*\)\(\s*\)=>/\1:/g<cr>
+imap <leader>=>2: <Esc>:%s/:\([^ ]*\)\(\s*\)=>/\1:/g
+
 " recovery config
 set backupdir=~/.vim/_backup    " where to put backup files.
 set directory=~/.vim/_temp      " where to put swap files.
