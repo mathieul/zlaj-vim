@@ -91,7 +91,7 @@ map <leader>gv :CommandTFlush<cr>\|:CommandT app/views<cr>
 map <leader>gc :CommandTFlush<cr>\|:CommandT app/controllers<cr>
 map <leader>gm :CommandTFlush<cr>\|:CommandT app/models<cr>
 map <leader>gh :CommandTFlush<cr>\|:CommandT app/helpers<cr>
-map <leader>gl :CommandTFlush<cr>\|:CommandT lib<cr>
+map <leader>gl :CommandTFlush<cr>\|:CommandT app/lib<cr>
 map <leader>gs :CommandTFlush<cr>\|:CommandT spec<cr>
 map <leader>gt :CommandTFlush<cr>\|:CommandT test<cr>
 map <leader>gp :CommandTFlush<cr>\|:CommandT public<cr>
