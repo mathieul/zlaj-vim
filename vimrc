@@ -12,7 +12,6 @@ set ruler                       " show the cursor position all the time
 set cursorline
 set list listchars=tab:\ \ ,trail:·
 " set list listchars=tab:▸\ ,eol:¬,trail:·
-set showcmd                     " display incomplete commands
 set wildmenu
 set wildmode=list:longest,full
 
@@ -75,7 +74,7 @@ if has("autocmd")
 endif
 
 " provide some context when editing
-set scrolloff=3
+"set scrolloff=3
 
 " don't use Ex mode, use Q for formatting
 map Q gq
