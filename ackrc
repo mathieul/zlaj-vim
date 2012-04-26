@@ -1,5 +1,5 @@
 --type-add=ruby=.haml,.rake,.thor,.rsel,.builder,.slim
---type-add=html=.html.erb,.html.haml,.md,.slim
+--type-add=html=.html.erb,.html.haml,.md,.slim,.eco
 --type-add=js=.coffee
 --type-add=js=.coffee,.js.erb
 --type-add=css=.sass,.less,.scss,.styl
