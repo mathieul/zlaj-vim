@@ -14,6 +14,7 @@ set list listchars=tab:\ \ ,trail:·
 " set list listchars=tab:▸\ ,eol:¬,trail:·
 set wildmenu
 set wildmode=list:longest,full
+set complete=.,t
 
 " Allow backgrounding buffers without writing them, and remember marks/undo
 " for backgrounded buffers
@@ -66,6 +67,9 @@ if has("autocmd")
 
   " Treat JSON files like JavaScript
   au BufNewFile,BufRead *.json set ft=javascript
+
+  " Treat Handlebars files like HTML
+  au BufNewFile,BufRead *.handlebars set ft=html
 
   " Remember last location in file, but not for commit messages.
   " see :help last-position-jump
