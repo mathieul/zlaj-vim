@@ -5,12 +5,15 @@
 --type-add=css=.sass,.less,.scss,.styl
 --type-set=cucumber=.feature
 --type-set=conf=.conf
-#--ignore-dir=vendor
 --ignore-dir=log
 --ignore-dir=tmp
 --ignore-dir=doc
 --ignore-dir=coverage
+--ignore-dir=public/stylesheets/compiled
+#--ignore-dir=test/javascripts/public/stylesheets/compiled
+--ignore-dir=public/assets
+#--ignore-dir=test/javascripts/public/assets
 --sort-files
 --color
---follow
+#--follow
 --group
