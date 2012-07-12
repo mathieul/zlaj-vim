@@ -12,9 +12,12 @@ set ruler                       " show the cursor position all the time
 set cursorline
 set list listchars=tab:\ \ ,trail:·
 " set list listchars=tab:▸\ ,eol:¬,trail:·
-set wildmenu
-set wildmode=list:longest,full
-set complete=.,t
+
+set complete=.,b,u,]
+set completeopt=menu,preview
+set wildmode=longest,list:longest
+" set wildmenu
+" set wildmode=list:longest,full
 
 " Allow backgrounding buffers without writing them, and remember marks/undo
 " for backgrounded buffers
@@ -45,7 +48,7 @@ if has("gui_running")
 endif
 
 "" Theme
-set background=dark
+set background=light
 colorscheme solarized
 
 "" Leader
